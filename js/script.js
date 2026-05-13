@@ -105,18 +105,6 @@ document
 function contact() {
     window.location.href = "#contact2";
 }
-//منع تحديد النصوص ونسخها
-document.addEventListener("contextmenu", event => event.preventDefault());
-// منع اختصارات النسخ (Ctrl+C / Ctrl+S / Ctrl+U...)
-document.onkeydown = function (e) {
-    if (
-        e.ctrlKey &&
-        (e.key === "u" || e.key === "s" || e.key === "c" || e.key === "x")
-    ) {
-        e.preventDefault();
-        alert("حقوق هذا الموقع محفوظة © IPTV PRO");
-    }
-};
 
 const phoneNumber = "212656945290";
 
@@ -232,7 +220,7 @@ waSubmit.addEventListener("click", function () {
         message += `📝 Message : ${note}\n`;
     }
 
-    message += `\nMerci de m'envoyer les détails de paiement.`;
+    message += `\Envoyez-moi les informations de paiement officielles.`;
 
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
